@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Local AI Content Operations は、Web制作から記事・画像・広告・公開運用を、人の判断と検証ログを残しながらつなぐローカルAI支援システムです。">
+  <title>Local AI Content Operations | 制作と運用を、検証可能な工程にする</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/editorial.css">
+  <link rel="stylesheet" href="assets/mobile-nav.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "制作と運用を、検証可能な工程にする。 | Local AI Content Operations",
+    "description": "Web制作から記事・画像・広告・公開運用を、人の判断と検証ログを残しながらつなぐローカルAI支援システムです。",
+    "url": "https://gorilla84-laplus.github.io/local-ai-content-operations/",
+    "inLanguage": "ja"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Local AI Content Operations",
+      "item": "https://gorilla84-laplus.github.io/local-ai-content-operations/"
+    }]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="#top"><span class="brand-mark">L</span><span>Local AI<br>Content Operations</span></a><nav><a href="creater/">Creater</a><a href="3d/">3D map</a><a href="case-study/">Case study</a><a href="getting-started/">Start here</a><a href="glossary-faq/">FAQ</a><a href="architecture/">Architecture</a><a href="https://local-llm-guide.com/" target="_blank" rel="noopener">Live media ↗</a></nav></header>
+  <main id="top">
+    <section class="hero frame">
+      <div class="hero-copy"><p class="eyebrow">LOCAL AI / HUMAN IN THE LOOP</p><h1>制作と運用を、<em>検証可能な工程</em>にする。</h1><p class="lede">Web制作から、記事・広告・公開運用までを一つの流れにするローカルAI支援システムです。生成を速くするだけでなく、誰が何を確認し、どこで公開判断するかを残します。</p><div class="hero-actions"><a class="button primary" href="#system">仕組みを見る <span>↓</span></a><a class="button quiet" href="creater/">Createrで視覚的に見る →</a><a class="button quiet" href="3d/">3Dマップで全体像を見る →</a><a class="button quiet" href="case-study/">実運用ケースを見る →</a><a class="button quiet" href="getting-started/">最初の公開までを見る →</a></div><dl class="mini-stats"><div><dt>INPUT</dt><dd>自然文の依頼</dd></div><div><dt>OUTPUT</dt><dd>Web / Article / Log</dd></div><div><dt>RELEASE</dt><dd>Human approved</dd></div></dl></div>
+      <figure class="hero-art"><img src="assets/images/hero-operations-v1.png" alt="記事、画像、ローカルAI、公開ダッシュボードをつなぐ制作運用イメージ"><figcaption>01 — Make the flow visible</figcaption></figure>
+    </section>
+    <section class="intro-strip"><p>AIが制作を置き換えるのではなく、<strong>人が判断しやすい形へ工程を組み替える。</strong></p><span>SCROLL TO EXPLORE ↓</span></section>
+    <section id="system" class="section frame split">
+      <div class="section-copy"><p class="eyebrow">01 / SYSTEM</p><h2>記事・広告・画像・公開・告知を、<em>検証可能な単位</em>でつなぐ。</h2><p>Codexは要件整理と最終判断、ローカルLLMは限定した下書き・候補生成、Laravelはプレビューと本番表示を担います。ひとつのAIに丸投げせず、作業を小さな責務へ分けます。</p><a class="text-link" href="architecture/">技術構成を深掘りする →</a></div>
+      <div class="role-grid"><article><span>HUMAN / CODEX</span><h3>要件・承認・公開判断</h3><p>誰に何を届けるか、どの案を採るか、最終的に出すかを決める。</p></article><article><span>LOCAL LLM</span><h3>下書き・候補・整理</h3><p>工程に応じて文章、構造、コードの候補を生成する。</p></article><article><span>LARAVEL</span><h3>表示・検査・同期</h3><p>プレビュー、記事表示、DB反映、公開後の確認を支える。</p></article><article><span>LOGS</span><h3>確認の痕跡を残す</h3><p>検査結果、承認状態、公開確認を次の判断へ引き継ぐ。</p></article></div>
+    </section>
+    <section class="section visual-workflow"><div class="frame workflow-layout"><figure><img src="assets/images/workflow-operations-v1.png" alt="人の依頼からAI生成、検査、公開、配信までを並べたワークフロー図解"></figure><div><p class="eyebrow">02 / WORKFLOW</p><h2>止める場所を先に決める。だから、速くても雑にならない。</h2><ol class="steps"><li><b>01</b><span><strong>Brief</strong>目的・読者・届け方を整理</span></li><li><b>02</b><span><strong>Generate</strong>役割に合うモデルで候補を生成</span></li><li><b>03</b><span><strong>Verify</strong>構造・表記・リンク・表示を検査</span></li><li><b>04</b><span><strong>Release</strong>本番同期、画像確認、配信の判断</span></li></ol></div></div></section>
+    <section id="modules" class="section frame"><p class="eyebrow">03 / MODULES</p><h2 class="wide-title">制作後も回るように、運用の仕事をモジュール化する。</h2><div class="module-grid"><article><span>01</span><h3>Web production</h3><p>要件、コンポーネント、CSS調整、プレビューを制作単位で残します。</p></article><article><span>02</span><h3>Article operations</h3><p>検証ログを中心に、記事の生成・品質確認・本番同期を扱います。</p></article><article><span>03</span><h3>Image pipeline</h3><p>記事の内容からプロンプト候補を作り、画像保存と公開反映をつなぎます。</p></article><article><span>04</span><h3>Ad registry</h3><p>広告候補は登録・承認を分け、記事と配信で使う前に人が確認します。</p></article><article><span>05</span><h3>Distribution</h3><p>X投稿は下書き・予約・実投稿確認を分け、クリックだけで成功としません。</p></article><article><span>06</span><h3>Evidence</h3><p>検証ログ、公開確認、設計メモを次の改善に再利用します。</p></article></div></section>
+    <section class="section model-section"><div class="frame model-layout"><div><p class="eyebrow">04 / MODEL ROUTING</p><h2>モデルは万能な担当者ではなく、工程に合わせて選ぶ作業者。</h2><p>公開済みの検証ログと出力品質を見ながら、役割ごとに候補を切り替えます。性能ランキングを掲げるのではなく、失敗した出力を検査して次の選択へ反映する運用です。</p><div class="model-list"><p><b>Planning</b><span>DeepSeek-R1系を構成・レビュー候補へ</span></p><p><b>Japanese writing</b><span>Qwen3.5 9Bを本文下書きの標準候補へ</span></p><p><b>Code</b><span>Qwen2.5-Coder系をファイル単位の生成へ</span></p><p><b>Experiment</b><span>検証ログでは複数モデルを比較対象として循環</span></p></div></div><figure><img src="assets/images/model-routing-v1.png" alt="計画、文章、コードの作業を品質ゲートと人の判断につなぐモデル振り分けのイメージ"></figure></div></section>
+    <section id="evidence" class="section frame evidence"><p class="eyebrow">05 / EVIDENCE &amp; BOUNDARIES</p><h2>自動化することと、<em>人が最終判断する境界</em>を分ける。</h2><div class="evidence-grid"><article><span>CHECK</span><h3>構造と表記を機械的に検査</h3><p>禁止表現、Markdown漏れ、途中切れ、PR表記、リンクなどを公開前に確認します。</p></article><article><span>SYNC</span><h3>本番同期と公開後の確認</h3><p>SQLiteから本番DBへ同期し、画像URLを含めて実際の表示を確認します。</p></article><article><span>REVIEW</span><h3>公開判断は人が持つ</h3><p>事実性、デザイン、広告の採否、投稿判断は自動化の外に残します。</p></article></div><p class="note">※ 現在は検証ログ中心に運用。画像生成はComfyUI API連携、動画は半自動パイロットとして拡張中です。</p></section>
+    <section class="closing frame"><p class="eyebrow">NEXT / EXPAND WITH CARE</p><h2>作る。確かめる。次に活かせる形で残す。</h2><p>ComfyUIによる画像生成の強化、動画パイロット、RAGによる参照資産の活用、ローカルオーケストレーターへの移行を段階的に進めます。</p><a class="button primary" href="https://local-llm-guide.com/" target="_blank" rel="noopener">実運用メディアへ ↗</a></section>
+  </main>
+  <footer><span>LOCAL AI CONTENT OPERATIONS</span><span><a href="glossary-faq/">用語とFAQ</a> · Human judgment remains in the loop.</span></footer>
+  <script src="assets/app.js"></script>
+</body>
+</html>

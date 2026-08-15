@@ -1,0 +1,210 @@
+@import url('styles.css');
+
+/* Mobile-first technical page shell. Desktop expands only at 760px. */
+.deep-header{padding:56px 5vw 34px;border-bottom:1px solid var(--line)}
+.deep-header a{min-height:44px;display:inline-flex;align-items:center;color:var(--blue);font:11px var(--mono);text-decoration:none}
+.deep-header h1{max-width:880px;font-size:clamp(38px,6vw,76px);line-height:1.12;letter-spacing:-.06em;margin:28px 0 18px}
+.deep-header p{max-width:720px;margin:0;font-size:16px}
+.deep-main{max-width:1120px;margin:auto;padding:0 5vw}
+.deep-main a{min-height:44px;display:inline-flex;align-items:center}
+.deep-section{padding:68px 0;border-bottom:1px solid var(--line)}
+.deep-section h2{font-size:clamp(29px,4vw,52px);line-height:1.2;letter-spacing:-.05em;margin:0 0 22px}
+.deep-section>p{max-width:730px;margin:0;font-size:15px}
+.flow{display:grid;gap:0;margin-top:32px}
+.flow article{display:grid;grid-template-columns:48px 1fr;gap:14px;padding:18px 0;border-top:1px solid var(--line)}
+.flow b{font:11px var(--mono);color:var(--coral)}
+.flow h3{margin:0;font-size:19px;line-height:1.35}
+.flow p{margin:4px 0 0;font-size:13px}
+.comparison{display:grid;gap:14px;margin-top:28px}
+.comparison article{padding:25px;border:1px solid var(--line);background:#fbf9f4}
+.comparison .is-system{background:var(--ink);color:var(--paper)}
+.comparison span{font:10px var(--mono);letter-spacing:.1em;color:var(--coral)}
+.comparison h3{font-size:24px;line-height:1.3;margin:13px 0}
+.comparison p{font-size:14px;margin:0}
+.pill-grid{display:grid;gap:12px;margin-top:28px}
+.pill-grid article{padding:18px;border-left:3px solid var(--blue);background:#eae5db}
+.pill-grid h3{margin:0;font-size:17px}
+.pill-grid p{font-size:13px;margin:5px 0 0}
+.faq-list{margin-top:28px}
+.faq-list details{border-top:1px solid var(--line);padding:12px 0}
+.faq-list details:last-child{border-bottom:1px solid var(--line)}
+.faq-list summary{width:100%;min-height:44px;display:inline-flex;align-items:center;cursor:pointer;font-weight:800}
+.faq-list p{margin:8px 0 4px;font-size:14px;line-height:1.8}
+.boundary-note{margin-top:28px!important;padding:16px;border-left:3px solid var(--coral);background:#fbf9f4;font-size:14px!important;line-height:1.8}
+.metric-grid{display:grid;gap:10px;margin-top:28px}
+.metric-grid span{min-height:44px;display:flex;align-items:center;padding:12px 14px;border:1px solid var(--line);background:#fbf9f4;font:12px var(--mono);overflow-wrap:anywhere}
+.deep-footer{padding:52px 5vw;background:var(--ink);color:var(--paper)}
+.deep-footer a{min-height:44px;display:inline-flex;align-items:center;color:var(--mint);font-weight:700}
+.deep-footer nav{display:flex;flex-wrap:wrap;gap:16px;margin-top:18px}
+.deep-footer nav a{padding:4px 0;font:11px var(--mono)}
+.deep-button{margin-top:26px;padding:0 20px;min-height:48px;border-radius:999px;background:var(--blue);color:var(--paper)!important;font-weight:800;text-decoration:none}
+.case-grid,.glossary-grid{display:grid;gap:14px;margin-top:28px}
+.case-grid article,.glossary-grid article{padding:20px;border:1px solid var(--line);background:#fbf9f4}
+.case-grid span{font:10px var(--mono);letter-spacing:.1em;color:var(--coral)}
+.case-grid h3,.glossary-grid h3{margin:10px 0 16px;font-size:20px;line-height:1.35}
+.case-grid dl{display:grid;grid-template-columns:92px 1fr;gap:7px 10px;margin:0;font-size:13px;line-height:1.6}
+.case-grid dt{font:10px var(--mono);color:var(--blue)}
+.case-grid dd{margin:0}
+.glossary-grid p{margin:0;font-size:14px;line-height:1.75}
+.compact{margin-top:28px}.compact article{min-height:0}.numbered article{padding-block:21px}
+
+@media(min-width:760px){
+  .comparison{grid-template-columns:1fr 1fr}
+  .pill-grid{grid-template-columns:repeat(3,1fr)}
+  .value-grid{grid-template-columns:repeat(2,1fr)}
+  .metric-grid{grid-template-columns:repeat(2,1fr)}
+  .case-grid{grid-template-columns:repeat(2,1fr)}
+  .glossary-grid{grid-template-columns:repeat(3,1fr)}
+}
+
+/* Phosphor Circuit: a scoped visual system for the three operations deep dives. */
+body.phosphor-page{
+  --paper:#060b14;
+  --ink:#e8f8ff;
+  --blue:#3de7ff;
+  --coral:#ff6da9;
+  --mint:#a8ffb8;
+  --line:#31506a;
+  --phosphor:#7affb2;
+  --circuit-void:#07101d;
+  --circuit-panel:#0c1b2b;
+  --circuit-panel-solid:#0c1725;
+  background:var(--paper);
+  color:var(--ink);
+}
+
+body.phosphor-page .deep-header{
+  display:grid;
+  gap:28px;
+  padding:clamp(32px,6vw,76px) 5vw;
+  border-bottom:1px solid color-mix(in srgb,var(--phosphor) 42%,var(--line));
+  background:
+    radial-gradient(circle at 15% 0%,#167c7247 0 2%,transparent 31%),
+    radial-gradient(circle at 90% 80%,#4c62df52 0 1%,transparent 34%),
+    linear-gradient(135deg,#071522 0%,var(--circuit-void) 62%,#0a1428 100%);
+  isolation:isolate;
+  overflow:hidden;
+}
+body.phosphor-page .circuit-intro{position:relative;z-index:1;max-width:760px}
+body.phosphor-page .deep-header a{color:var(--phosphor)}
+body.phosphor-page .deep-header .eyebrow{color:var(--blue);margin-top:28px}
+body.phosphor-page .deep-header h1{
+  max-width:760px;
+  color:#f2fdff;
+  text-shadow:0 0 24px #3de7ff26;
+}
+body.phosphor-page .deep-header p:not(.eyebrow){color:#c2d8e8}
+body.phosphor-page .circuit-visual{
+  position:relative;
+  perspective:880px;
+  min-height:220px;
+  margin:0;
+  overflow:hidden;
+  border:1px solid #7affb276;
+  border-radius:22px;
+  background:var(--circuit-panel);
+  box-shadow:0 18px 44px #0000005c,0 0 0 1px #3de7ff1f inset;
+  transform:rotateX(3deg) rotateY(-4deg);
+}
+body.phosphor-page .circuit-visual::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:2;
+  pointer-events:none;
+  opacity:.72;
+  background:
+    linear-gradient(90deg,#7affb230 1px,transparent 1px) 0 0/32px 32px,
+    linear-gradient(#3de7ff24 1px,transparent 1px) 0 0/32px 32px,
+    linear-gradient(135deg,#07101d08 8%,#07101dbf 82%);
+}
+body.phosphor-page .circuit-visual::after{
+  content:"";
+  position:absolute;
+  right:11%;bottom:16%;
+  z-index:3;
+  width:12px;height:12px;
+  border-radius:50%;
+  background:var(--phosphor);
+  box-shadow:-74px -50px 0 -2px var(--blue),-141px 33px 0 -2px var(--coral),0 0 18px 5px #7affb263;
+}
+body.phosphor-page .circuit-visual img{
+  width:100%;height:100%;
+  min-height:220px;
+  display:block;
+  object-fit:cover;
+  object-position:center;
+  opacity:.7;
+  filter:saturate(.62) contrast(1.08) brightness(.82);
+}
+body.phosphor-page .deep-main{position:relative}
+body.phosphor-page .deep-main::before{
+  content:"";
+  position:absolute;
+  top:0;bottom:0;left:5vw;
+  width:1px;
+  pointer-events:none;
+  background:linear-gradient(var(--phosphor),transparent 18%,transparent 84%,var(--blue));
+  opacity:.42;
+}
+body.phosphor-page .deep-section{border-color:color-mix(in srgb,var(--line) 88%,transparent)}
+body.phosphor-page .deep-section h2{color:#effaff}
+body.phosphor-page .flow{position:relative}
+body.phosphor-page .flow::before{
+  content:"";
+  position:absolute;
+  top:27px;bottom:27px;left:23px;
+  width:1px;
+  background:linear-gradient(var(--phosphor),var(--blue),var(--coral));
+  opacity:.78;
+}
+body.phosphor-page .flow article{
+  position:relative;
+  border-color:color-mix(in srgb,var(--line) 88%,transparent);
+  transition:background .2s ease,transform .2s ease;
+}
+body.phosphor-page .flow article:hover{background:#12324a52;transform:translateX(4px)}
+body.phosphor-page .flow b{color:var(--phosphor);z-index:1;text-shadow:0 0 12px #7affb275}
+body.phosphor-page .flow p,body.phosphor-page .pill-grid p,body.phosphor-page .comparison p{color:#bcd0df}
+body.phosphor-page .comparison article,
+body.phosphor-page .pill-grid article,
+body.phosphor-page .metric-grid span,
+body.phosphor-page .case-grid article,
+body.phosphor-page .glossary-grid article{
+  border-color:color-mix(in srgb,var(--blue) 42%,var(--line));
+  background:linear-gradient(145deg,#11243ad9,#0a1422b8);
+  box-shadow:0 10px 25px #0000002e,0 0 0 1px #7affb214 inset;
+}
+body.phosphor-page .comparison .is-system{background:linear-gradient(145deg,#123344,#0a1726);color:var(--ink)}
+body.phosphor-page .comparison span,body.phosphor-page .case-grid span{color:var(--phosphor)}
+body.phosphor-page .pill-grid article{border-left-color:var(--phosphor)}
+body.phosphor-page .boundary-note{background:#102234;border-left-color:var(--phosphor)}
+body.phosphor-page .faq-list details{border-color:var(--line)}
+body.phosphor-page .deep-footer{
+  border-top:1px solid #3de7ff55;
+  background:linear-gradient(120deg,#07131f,#0a1a2b);
+}
+body.phosphor-page .deep-footer a{color:var(--phosphor)}
+body.phosphor-page :focus-visible{outline:2px solid var(--phosphor);outline-offset:4px}
+
+@media(min-width:760px){
+  body.phosphor-page .circuit-header{grid-template-columns:minmax(0,1.25fr) minmax(270px,.75fr);align-items:center;gap:6vw}
+  body.phosphor-page .circuit-visual{min-height:300px}
+  body.phosphor-page .circuit-visual img{min-height:300px}
+}
+
+@media(prefers-reduced-motion:reduce){
+  body.phosphor-page *,body.phosphor-page *::before,body.phosphor-page *::after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}
+  body.phosphor-page .circuit-visual,body.phosphor-page .flow article:hover{transform:none}
+}
+
+@media(prefers-reduced-transparency:reduce){
+  body.phosphor-page .deep-header,
+  body.phosphor-page .comparison article,
+  body.phosphor-page .pill-grid article,
+  body.phosphor-page .metric-grid span,
+  body.phosphor-page .case-grid article,
+  body.phosphor-page .glossary-grid article{background:var(--circuit-panel-solid)}
+  body.phosphor-page .circuit-visual::before{opacity:.34}
+  body.phosphor-page .circuit-visual img{opacity:1;filter:contrast(1.05) brightness(.86)}
+}

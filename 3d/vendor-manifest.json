@@ -1,0 +1,17 @@
+{
+  "name": "three",
+  "version": "0.185.1",
+  "license": "MIT",
+  "source": "https://registry.npmjs.org/three/-/three-0.185.1.tgz",
+  "retrieved": "2026-08-15",
+  "files": [
+    {
+      "path": "assets/vendor/three-r185/three.module.min.js",
+      "sha512": "23af22db8d2d3a0578f9711a58e8526fa8340d2607059be1e7157f383e2bf203102f33250a218b28932fd9c2effcd49272523fd4e3aa0506dc09ad86b4b293a1"
+    },
+    {
+      "path": "assets/vendor/three-r185/three.core.min.js",
+      "sha512": "5b33f7f67fa02b31cdf864489e3f852f8f893db04f90642225ff280815ea6aa96a739ee35beb0f6059f8f1db3eb254017b5f1fe0c72dc3973e440115ae108ede"
+    }
+  ]
+}

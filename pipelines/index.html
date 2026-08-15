@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pipelines | Local AI Content Operations</title>
+  <link rel="stylesheet" href="../assets/deep.css" />
+  <link rel="stylesheet" href="../assets/editorial.css" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"制作から配信まで、止める場所を組み込む。","description":"Web、記事、画像、広告、公開、配信を人の確認を挟みながらつなぐ工程。","url":"https://gorilla84-laplus.github.io/local-ai-content-operations/pipelines/"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Local AI Content Operations","item":"https://gorilla84-laplus.github.io/local-ai-content-operations/"},{"@type":"ListItem","position":2,"name":"Pipelines","item":"https://gorilla84-laplus.github.io/local-ai-content-operations/pipelines/"}]}</script>
+  </head>
+  <body class="phosphor-page phosphor-pipelines">
+    <header class="deep-header circuit-header">
+      <div class="circuit-intro">
+        <a href="../">← Local AI Content Operations</a>
+        <p class="eyebrow">PIPELINES / 02</p>
+        <h1>制作から配信まで、止める場所を組み込む。</h1>
+        <p>
+          各工程を「入力・機械処理・人の判断・出力」に分け、生成がそのまま公開へ流れない設計にしています。
+        </p>
+      </div>
+      <figure class="circuit-visual" aria-hidden="true"><img src="../assets/images/workflow-operations-v1.png" alt=""></figure>
+    </header>
+    <main class="deep-main">
+      <section class="deep-section">
+        <h2>Web制作</h2>
+        <div class="flow">
+          <article>
+            <b>INPUT</b>
+            <div>
+              <h3>目的・読者・導線</h3>
+              <p>自然文の依頼をbriefとして整理する。</p>
+            </div>
+          </article>
+          <article>
+            <b>PROCESS</b>
+            <div>
+              <h3>構成・コード候補・Preview</h3>
+              <p>
+                ブロック構成とファイル単位の生成をLaravel Previewで確認する。
+              </p>
+            </div>
+          </article>
+          <article>
+            <b>HUMAN</b>
+            <div>
+              <h3>レイアウトと訴求を決める</h3>
+              <p>見た目、コピー、公開範囲を人が最終判断する。</p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="deep-section">
+        <h2>検証ログ記事・画像・広告</h2>
+        <div class="pill-grid">
+          <article>
+            <h3>Article</h3>
+            <p>
+              現在は検証ログ中心。生成後に事実性、日本語、途中切れ、Markdown漏れを確認する。
+            </p>
+          </article>
+          <article>
+            <h3>Image</h3>
+            <p>
+              記事からプロンプト候補を作り、ComfyUI連携は拡張中。画像生成に失敗しても記事化は止めない。
+            </p>
+          </article>
+          <article>
+            <h3>Ad registry</h3>
+            <p>
+              候補はpendingで登録し、人が承認したものだけを表示・配信の候補に使う。
+            </p>
+          </article>
+        </div>
+      </section>
+      <section class="deep-section">
+        <h2>本番同期とX配信</h2>
+        <div class="flow">
+          <article>
+            <b>01</b>
+            <div>
+              <h3>本番へ同期</h3>
+              <p>ローカルDBから本番DBへ明示的に反映する。</p>
+            </div>
+          </article>
+          <article>
+            <b>02</b>
+            <div>
+              <h3>表示と画像URLを確認</h3>
+              <p>HTTPで実際の公開状態を確認する。</p>
+            </div>
+          </article>
+          <article>
+            <b>03</b>
+            <div>
+              <h3>Xは下書き・予約・確認を分ける</h3>
+              <p>クリックだけで成功とせず、投稿後の表示まで確認する。</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer class="deep-footer">
+      <strong>Next: 公開前の品質境界を見る</strong>
+      <nav>
+        <a href="../quality-and-security/">Quality & Security →</a
+        ><a href="../architecture/">Architecture ←</a><a href="../">Top</a>
+      </nav>
+    </footer>
+  </body>
+</html>

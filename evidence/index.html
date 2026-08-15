@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Evidence | Local AI Content Operations</title>
+  <link rel="stylesheet" href="../assets/deep.css" />
+  <link rel="stylesheet" href="../assets/editorial.css" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"生成物だけでなく、判断の根拠を残す。","description":"検証ログ、公開確認、失敗記録を次の制作・運用へ再利用する考え方。","url":"https://gorilla84-laplus.github.io/local-ai-content-operations/evidence/"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Local AI Content Operations","item":"https://gorilla84-laplus.github.io/local-ai-content-operations/"},{"@type":"ListItem","position":2,"name":"Evidence","item":"https://gorilla84-laplus.github.io/local-ai-content-operations/evidence/"}]}</script>
+  </head>
+  <body class="phosphor-page phosphor-evidence">
+    <header class="deep-header circuit-header">
+      <div class="circuit-intro">
+        <a href="../">← Local AI Content Operations</a>
+        <p class="eyebrow">EVIDENCE / 05</p>
+        <h1>生成物だけでなく、判断の根拠を残す。</h1>
+        <p>
+          完成ページの見た目だけでは、次の更新で何を再現すべきか分かりません。検査・承認・公開確認を、運用の証跡として扱います。
+        </p>
+      </div>
+      <figure class="circuit-visual" aria-hidden="true"><img src="../assets/images/workflow-operations-v1.png" alt="" /></figure>
+    </header>
+    <main class="deep-main">
+      <section class="deep-section">
+        <p class="eyebrow">LIVE OUTPUT</p>
+        <h2>実運用メディアで、記事と更新の工程を続けている。</h2>
+        <p>
+          <a
+            class="text-link"
+            href="https://local-llm-guide.com/"
+            target="_blank"
+            rel="noopener"
+            >local-llm-guide.com ↗</a
+          >
+          はLaravelで運用する公開メディアです。検証ログを中心に、記事・画像・広告表示・更新の流れを実際の公開面で確認しています。
+        </p>
+      </section>
+      <section class="deep-section">
+        <div class="flow">
+          <article>
+            <b>01</b>
+            <div>
+              <h3>下書きと検査結果</h3>
+              <p>生成直後の成果物と、不良理由を記録する。</p>
+            </div>
+          </article>
+          <article>
+            <b>02</b>
+            <div>
+              <h3>承認状態</h3>
+              <p>広告候補や公開対象を、未承認の状態と分けて扱う。</p>
+            </div>
+          </article>
+          <article>
+            <b>03</b>
+            <div>
+              <h3>本番反映</h3>
+              <p>同期後に記事URL・画像URLなどの実表示を確認する。</p>
+            </div>
+          </article>
+          <article>
+            <b>04</b>
+            <div>
+              <h3>投稿の確認</h3>
+              <p>Xは操作成功ではなく、投稿反映までを確認対象にする。</p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="deep-section">
+        <h2>失敗と改善を隠さない。</h2>
+        <div class="comparison">
+          <article>
+            <span>KNOWN FAILURE</span>
+            <h3>不良パターンをチェックリストへ</h3>
+            <p>
+              数値の捏造、他言語出力、Markdown漏れ、途中切れなどを、次回の出荷前確認に反映する。
+            </p>
+          </article>
+          <article class="is-system">
+            <span>IMPROVEMENT LOOP</span>
+            <h3>ログを次の設計へ戻す</h3>
+            <p>
+              失敗したモデル・工程・確認不足を見直し、同じ失敗を再現しにくい仕組みへ更新する。
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer class="deep-footer">
+      <strong>Next: 拡張の条件を見る</strong>
+      <nav>
+        <a href="../roadmap/">Roadmap →</a
+        ><a href="../quality-and-security/">Quality & Security →</a
+        ><a href="../">Top</a>
+      </nav>
+    </footer>
+  </body>
+</html>

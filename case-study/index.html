@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="公開メディアの運用を題材に、依頼から公開後確認までを人とローカルAIの役割で説明するケーススタディです。">
+  <title>Case study | Local AI Content Operations</title>
+  <link rel="stylesheet" href="../assets/deep.css">
+  <link rel="stylesheet" href="../assets/editorial.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Case study | Local AI Content Operations","description":"依頼から公開後確認までを工程で説明する公開ケーススタディ。","url":"https://gorilla84-laplus.github.io/local-ai-content-operations/case-study/","inLanguage":"ja"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Local AI Content Operations","item":"https://gorilla84-laplus.github.io/local-ai-content-operations/"},{"@type":"ListItem","position":2,"name":"Case study","item":"https://gorilla84-laplus.github.io/local-ai-content-operations/case-study/"}]}</script>
+</head>
+<body>
+  <header class="deep-header"><a href="../">← Local AI Content Operations</a><p class="eyebrow">CASE STUDY / PUBLIC MEDIA</p><h1>実運用メディアを題材に、<em>工程を追える形で残す。</em></h1><p>公開中の技術メディアを例に、AIへ任せる作業と、人が判断を残す箇所を6つの工程で整理します。個別の認証情報や内部記録は公開しません。</p></header>
+  <main class="deep-main">
+    <section class="deep-section"><p class="eyebrow">THE CASE</p><h2>会話で一度作るだけでなく、次の更新でも辿れる工程にする。</h2><p>目的や読者、公開基準を決め、候補生成・検査・同期・公開後の確認を分けます。通常カテゴリの記事を全面自動化しているという意味ではなく、現在は検証ログ中心の運用です。</p></section>
+    <section class="deep-section"><p class="eyebrow">01–06 / TRACEABLE FLOW</p><div class="case-grid">
+      <article><span>01 / INPUT</span><h3>依頼を工程へ翻訳する</h3><dl><dt>Input</dt><dd>読者、目的、扱わない内容</dd><dt>System action</dt><dd>構成と候補の整理</dd><dt>Human decision</dt><dd>テーマと届け方の判断</dd><dt>Evidence</dt><dd>要件と作業単位</dd></dl></article>
+      <article><span>02 / DRAFT</span><h3>役割に合う候補をつくる</h3><dl><dt>Input</dt><dd>決定した要件</dd><dt>System action</dt><dd>文章・構造・画像案の生成</dd><dt>Human decision</dt><dd>採用案と修正方針</dd><dt>Evidence</dt><dd>生成物と変更履歴</dd></dl></article>
+      <article><span>03 / CHECK</span><h3>機械的に見つけられる欠落を確認</h3><dl><dt>Input</dt><dd>下書きと掲載条件</dd><dt>System action</dt><dd>構造、リンク、表記の検査</dd><dt>Human decision</dt><dd>事実性と文脈の確認</dd><dt>Evidence</dt><dd>検査結果</dd></dl></article>
+      <article><span>04 / ASSETS</span><h3>画像と広告を別の責務で扱う</h3><dl><dt>Input</dt><dd>記事の意図と掲載面</dd><dt>System action</dt><dd>画像候補・広告候補の整理</dd><dt>Human decision</dt><dd>デザインと広告の採否</dd><dt>Evidence</dt><dd>承認状態と掲載確認</dd></dl></article>
+      <article><span>05 / RELEASE</span><h3>公開対象を限定して同期する</h3><dl><dt>Input</dt><dd>確認済みの成果物</dd><dt>System action</dt><dd>プレビューと公開面への反映</dd><dt>Human decision</dt><dd>公開するタイミング</dd><dt>Evidence</dt><dd>公開対象と表示確認</dd></dl></article>
+      <article><span>06 / OBSERVE</span><h3>公開後も、結果を次へ残す</h3><dl><dt>Input</dt><dd>公開URLと配信案</dd><dt>System action</dt><dd>表示・リンク・配信状態の確認</dd><dt>Human decision</dt><dd>更新・告知の判断</dd><dt>Evidence</dt><dd>確認結果と改善メモ</dd></dl></article>
+    </div></section>
+    <section class="deep-section"><h2>価値は「速く書く」だけではありません。</h2><div class="pill-grid"><article><h3>判断点が見える</h3><p>誰が決めるかを工程に残し、会話だけに埋もれにくくします。</p></article><article><h3>確認を再実行できる</h3><p>更新時も同じ確認点を辿れるため、見落としを減らす材料になります。</p></article><article><h3>成果物を引き継げる</h3><p>公開物だけでなく、判断の理由を次の制作へ使える形にします。</p></article></div></section>
+    <section class="deep-section"><p class="boundary-note">公開可否、事実確認、デザイン、広告の採否は人が判断します。ここで示す工程は結果や安全性を保証するものではありません。</p></section>
+  </main>
+  <footer class="deep-footer"><a href="../getting-started/">最初の公開までの導入ガイドを見る →</a><nav><a href="../architecture/">Architecture</a><a href="../pipelines/">Pipelines</a><a href="../glossary-faq/">用語とFAQ</a></nav></footer>
+</body></html>

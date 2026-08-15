@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,follow">
+  <meta name="description" content="Local AI Content Operations の既存ページを、工程のつながりとして探索する補助的な入口です。">
+  <title>Operation Constellation | Local AI Content Operations</title>
+  <link rel="stylesheet" href="assets/scene.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Operation Constellation","description":"既存の Local AI Content Operations を工程のつながりとして探索する補助的な入口です。","url":"https://gorilla84-laplus.github.io/local-ai-content-operations/3d/","inLanguage":"ja"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Local AI Content Operations","item":"https://gorilla84-laplus.github.io/local-ai-content-operations/"},{"@type":"ListItem","position":2,"name":"Operation Constellation","item":"https://gorilla84-laplus.github.io/local-ai-content-operations/3d/"}]}</script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../"><span aria-hidden="true">L</span> Local AI Content Operations</a>
+    <a class="back-link" href="../">通常版を開く</a>
+  </header>
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">OPTIONAL EXPLORATION / HUMAN IN THE LOOP</p>
+      <h1 id="page-title">工程を、<em>星図のように</em>たどる。</h1>
+      <p>これは既存の説明ページを探索するための補助的な入口です。3D地図は内容の代わりではなく、工程の関係を見渡すための表示です。</p>
+      <p id="three-status" class="status" role="status">3D表示は、端末の設定と接続状況を確認してから有効にできます。</p>
+      <button id="enable-three" class="enable-button" type="button">3D表示を有効にする</button>
+    </section>
+
+    <section class="map-section" aria-labelledby="map-title">
+      <div>
+        <p class="eyebrow">OPERATION MAP</p>
+        <h2 id="map-title">工程の入口を選ぶ</h2>
+        <p class="fallback-message">3D表示を利用できない環境でも、以下の一覧からすべての工程を開けます。</p>
+      </div>
+      <figure class="scene-frame">
+        <div id="three-scene" aria-hidden="true">
+          <p>3D地図は明示的な有効化後に読み込まれます。</p>
+        </div>
+        <figcaption>3D地図は一覧の選択状態を補助的に示します。キーボード操作は一覧から行えます。</figcaption>
+        <p id="scene-selection" class="scene-selection">選択中の工程: 一覧から工程を選んでください。</p>
+      </figure>
+      <nav aria-label="Content Operations の工程一覧">
+        <ul id="node-list" class="node-list">
+          <li><a href="../" data-node="overview"><span class="node-group">入口</span><strong>入口</strong><span>制作と運用を、検証可能な工程にする</span></a></li>
+          <li><a href="../architecture/" data-node="architecture"><span class="node-group">工程</span><strong>技術構成</strong><span>AIを一つの担当者にしない</span></a></li>
+          <li><a href="../pipelines/" data-node="pipelines"><span class="node-group">工程</span><strong>工程設計</strong><span>制作から配信までを分ける</span></a></li>
+          <li><a href="../quality-and-security/" data-node="quality"><span class="node-group">品質</span><strong>品質と安全</strong><span>検査と人の判断を残す</span></a></li>
+          <li><a href="../model-routing/" data-node="models"><span class="node-group">工程</span><strong>モデル選定</strong><span>工程に合わせて役割を決める</span></a></li>
+          <li><a href="../evidence/" data-node="evidence"><span class="node-group">品質</span><strong>証跡</strong><span>確認を次の判断へつなぐ</span></a></li>
+          <li><a href="../roadmap/" data-node="roadmap"><span class="node-group">導入</span><strong>ロードマップ</strong><span>拡張を段階的に扱う</span></a></li>
+          <li><a href="../search-and-ai-discovery/" data-node="discovery"><span class="node-group">運用</span><strong>発見される設計</strong><span>検索とAI検索の基本</span></a></li>
+          <li><a href="../value/" data-node="value"><span class="node-group">導入</span><strong>導入価値</strong><span>測定して初めて効果になる</span></a></li>
+          <li><a href="../case-study/" data-node="case-study"><span class="node-group">運用</span><strong>ケーススタディ</strong><span>実運用を工程で追う</span></a></li>
+          <li><a href="../getting-started/" data-node="getting-started"><span class="node-group">導入</span><strong>はじめ方</strong><span>最初の公開までを確認する</span></a></li>
+          <li><a href="../glossary-faq/" data-node="glossary"><span class="node-group">入口</span><strong>用語とFAQ</strong><span>運用の言葉と判断の境界</span></a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <section id="reader-panel" class="reader-panel" aria-labelledby="reader-title" hidden>
+      <div class="reader-heading">
+        <p class="eyebrow">SOURCE PAGE</p>
+        <h2 id="reader-title" tabindex="-1">選択したページ</h2>
+        <p id="reader-summary"></p>
+        <a id="source-link" class="source-link" href="../">元のページを開く</a>
+      </div>
+      <div id="reader-content" class="reader-content" aria-live="polite"></div>
+    </section>
+  </main>
+  <footer>Local AI Content Operations — 人の最終判断を工程に残す。</footer>
+  <script type="module" src="assets/scene.js"></script>
+</body>
+</html>

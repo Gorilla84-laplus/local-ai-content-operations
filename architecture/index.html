@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Architecture | Local AI Content Operations</title>
+  <link rel="stylesheet" href="../assets/deep.css">
+  <link rel="stylesheet" href="../assets/editorial.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"AIを一つの担当者にしない。","description":"会話型エージェントの判断力と、再実行可能なローカル工程を分ける構成。","url":"https://gorilla84-laplus.github.io/local-ai-content-operations/architecture/"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Local AI Content Operations","item":"https://gorilla84-laplus.github.io/local-ai-content-operations/"},{"@type":"ListItem","position":2,"name":"Architecture","item":"https://gorilla84-laplus.github.io/local-ai-content-operations/architecture/"}]}</script>
+</head>
+<body class="phosphor-page phosphor-architecture">
+  <header class="deep-header circuit-header">
+    <div class="circuit-intro">
+      <a href="../">← Local AI Content Operations</a>
+      <p class="eyebrow">ARCHITECTURE / 01</p>
+      <h1>AIを一つの担当者にしない。</h1>
+      <p>会話型エージェントの判断力を中心に置きながら、繰り返しの実行をローカルへ寄せることで、公開前後の確認を残す構成です。</p>
+    </div>
+    <figure class="circuit-visual" aria-hidden="true"><img src="../assets/images/hero-operations-v1.png" alt=""></figure>
+  </header>
+  <main class="deep-main">
+    <section class="deep-section">
+      <p class="eyebrow">THE DIFFERENCE</p>
+      <h2>Codex / Claude Code単体で終わらせず、制作を次回も再実行できる工程にする。</h2>
+      <div class="comparison">
+        <article><span>AGENT ONLY</span><h3>会話を起点に、探索と制作を進める</h3><p>要件整理、設計、実装、都度レビューに強い。一方で、承認状態・本番反映・広告・投稿確認の手順は会話や担当者の記憶に埋もれやすい。</p></article>
+        <article class="is-system"><span>WITH OPERATIONS</span><h3>判断はエージェント、反復は仕組みに置く</h3><p>生成、検査、DB同期、公開確認を役割別に分離。会話の文脈を失っても、次に何を実行し確認するかを追える。</p></article>
+      </div>
+    </section>
+    <section class="deep-section">
+      <p class="eyebrow">ROLE BOUNDARIES</p>
+      <h2>判断・生成・表示・状態を分ける。</h2>
+      <div class="flow">
+        <article><b>01</b><div><h3>Codex / Claude Code</h3><p>要件整理、設計判断、例外対応、最終レビューを担う。</p></div></article>
+        <article><b>02</b><div><h3>Ollama / local LLM</h3><p>文章・構造・コードの候補を、用途を絞って生成する。</p></div></article>
+        <article><b>03</b><div><h3>Python / SQLite</h3><p>検査、広告承認状態、同期対象、実行ログを扱う。</p></div></article>
+        <article><b>04</b><div><h3>Laravel / MySQL / Pages</h3><p>表示、プレビュー、本番反映、静的公開をそれぞれ担う。</p></div></article>
+      </div>
+    </section>
+    <section class="deep-section">
+      <p class="eyebrow">BOUNDARY</p>
+      <h2>ローカル保存と公開判断を分ける。</h2>
+      <div class="pill-grid">
+        <article><h3>生成物はまずローカルへ</h3><p>記事や候補は直ちに公開せず、ローカルDB・下書き・検査結果に留める。</p></article>
+        <article><h3>同期は別工程</h3><p>本番DB反映は明示的な操作として分け、公開先を誤って上書きしない。</p></article>
+        <article><h3>人の承認を残す</h3><p>事実性、広告、デザイン、投稿・公開の判断を自動化の外に残す。</p></article>
+      </div>
+    </section>
+  </main>
+  <footer class="deep-footer"><strong>Next: 制作から配信までの工程を見る</strong><nav><a href="../pipelines/">Pipelines →</a><a href="../quality-and-security/">Quality & Security →</a><a href="https://local-llm-guide.com/" target="_blank" rel="noopener">Live media ↗</a></nav></footer>
+</body>
+</html>

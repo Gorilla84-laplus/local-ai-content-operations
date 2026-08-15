@@ -1,0 +1,89 @@
+/* Mobile-first editorial layer: hierarchy before decoration. */
+:root { --display-compact: clamp(2.25rem, 10vw, 3rem); --title-compact: clamp(1.75rem, 8vw, 2.15rem); }
+
+.hero,
+.split,
+.workflow-layout,
+.model-layout { grid-template-columns: 1fr; }
+
+.hero { gap: 28px; padding-top: 34px; padding-bottom: 58px; }
+.hero-art { order: -1; }
+.hero h1,
+.section h2,
+.closing h2,
+.deep-header h1,
+.deep-section h2 { text-wrap: balance; overflow-wrap: anywhere; letter-spacing: -.025em; }
+.hero h1 { font-size: clamp(2.25rem, 10vw, 2.65rem); line-height: 1.08; }
+.section h2,
+.closing h2 { font-size: var(--title-compact); line-height: 1.18; }
+.deep-header { padding: 38px 5vw 26px; }
+.deep-header h1 { font-size: var(--display-compact); line-height: 1.12; margin: 22px 0 14px; }
+.deep-section { padding: 48px 0; }
+.deep-section h2 { font-size: clamp(1.65rem, 7.7vw, 1.95rem); line-height: 1.22; }
+
+.intro-strip { display: block; padding-block: 18px; }
+.intro-strip span { display: none; }
+.section { padding-top: 56px; padding-bottom: 56px; }
+.role-grid,
+.module-grid,
+.evidence-grid { grid-template-columns: 1fr; gap: 0; }
+.role-grid article,
+.module-grid article,
+.evidence-grid article { min-height: 0; padding: 19px 0; border: 0; border-top: 1px solid var(--line); background: transparent; }
+.role-grid article:last-child,
+.module-grid article:last-child,
+.evidence-grid article:last-child { border-bottom: 1px solid var(--line); }
+.role-grid h3,
+.module-grid h3,
+.evidence-grid h3 { margin: 8px 0 5px; font-size: 18px; line-height: 1.42; text-wrap: balance; }
+.module-grid article:hover { transform: none; background: transparent; }
+.module-grid article { display: grid; grid-template-columns: 42px 1fr; column-gap: 12px; }
+.module-grid article > span { grid-row: span 2; padding-top: 2px; font-size: 13px; color: color-mix(in srgb, var(--blue) 65%, transparent); }
+.module-grid article h3,
+.module-grid article p { grid-column: 2; }
+
+.visual-workflow { padding-block: 58px; }
+.workflow-layout figure,
+.model-layout figure { margin-inline: -1px; }
+.workflow-layout img,
+.model-layout img { border-radius: 20px; }
+.steps { margin-top: 22px; }
+.steps li { padding: 14px 0; }
+.steps strong { display: block; width: auto; margin-bottom: 3px; }
+.model-section { padding-block: 56px; }
+.model-layout figure { order: -1; }
+.model-list p { grid-template-columns: 1fr; gap: 3px; padding: 13px 0; }
+
+.comparison article { padding: 21px; }
+.pill-grid { gap: 0; }
+.pill-grid article { padding: 17px 0; border: 0; border-top: 1px solid var(--line); background: transparent; }
+.pill-grid article:last-child { border-bottom: 1px solid var(--line); }
+.pill-grid h3 { font-size: 18px; line-height: 1.4; text-wrap: balance; }
+.case-grid { display: grid; grid-template-columns: 1fr; gap: 0; margin-top: 28px; border-top: 1px solid var(--line); }
+.case-grid article { padding: 25px 0; border: 0; border-bottom: 1px solid var(--line); background: transparent; }
+.case-grid h3 { font-size: 19px; }
+.case-grid dl { grid-template-columns: 76px 1fr; }
+.glossary-grid { gap: 0; border-top: 1px solid var(--line); }
+.glossary-grid article { padding: 17px 0; border: 0; border-bottom: 1px solid var(--line); background: transparent; }
+.glossary-grid h3 { font-size: 18px; }
+.metric-grid { display: flex; flex-wrap: wrap; gap: 7px; }
+.metric-grid span { min-height: 32px; padding: 5px 9px; border-radius: 999px; font-size: 10px; }
+.boundary-note { padding: 14px 0 14px 14px; background: transparent; }
+
+@media(min-width:760px) {
+  .hero { grid-template-columns: 1fr 1.02fr; gap: 5vw; padding-top: 9vw; padding-bottom: 7vw; }
+  .hero-art { order: initial; }
+  .section { padding-top: 104px; padding-bottom: 104px; }
+  .split { grid-template-columns: .9fr 1.1fr; gap: 8vw; }
+  .workflow-layout,
+  .model-layout { grid-template-columns: 1.05fr .95fr; gap: 7vw; }
+  .role-grid { grid-template-columns: repeat(2, 1fr); column-gap: 28px; }
+  .module-grid { grid-template-columns: repeat(3, 1fr); column-gap: 28px; }
+  .evidence-grid { grid-template-columns: repeat(3, 1fr); column-gap: 28px; }
+  .role-grid article:nth-last-child(-n+2),
+  .module-grid article:nth-last-child(-n+3),
+  .evidence-grid article:nth-last-child(-n+3) { border-bottom: 1px solid var(--line); }
+  .case-grid { grid-template-columns: 1fr; max-width: 760px; }
+  .glossary-grid { grid-template-columns: repeat(3, 1fr); column-gap: 24px; }
+  .glossary-grid article:nth-last-child(-n+3) { border-bottom: 1px solid var(--line); }
+}

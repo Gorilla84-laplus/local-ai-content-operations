@@ -1,0 +1,35 @@
+.site-header .brand,
+.site-header nav a,
+.hero-actions a,
+.section-copy .text-link,
+.closing .button {
+  min-height:44px;
+  display:inline-flex;
+  align-items:center;
+}
+
+@media (max-width:800px) {
+  .site-header {
+    height:auto;
+    min-height:64px;
+    align-items:flex-start;
+    gap:8px;
+    padding-top:10px;
+    padding-bottom:10px;
+  }
+
+  .site-header nav {
+    flex:1 1 100%;
+    gap:0;
+    justify-content:flex-start;
+    flex-wrap:wrap;
+  }
+
+  .site-header nav a,
+  .site-header nav a:not(:last-child) {
+    display:inline-flex;
+    flex:0 0 auto;
+    padding:0 9px;
+    white-space:nowrap;
+  }
+}

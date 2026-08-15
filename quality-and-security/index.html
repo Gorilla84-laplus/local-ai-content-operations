@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Local AI Content Operations の品質確認、安全境界、承認と公開後確認の考え方。">
+  <title>Quality &amp; Security | Local AI Content Operations</title>
+  <link rel="stylesheet" href="../assets/deep.css">
+  <link rel="stylesheet" href="../assets/editorial.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebPage","name":"公開前に何を確かめ、誰が止めるか。","description":"Local AI Content Operations の品質確認、安全境界、承認と公開後確認の考え方。","url":"https://gorilla84-laplus.github.io/local-ai-content-operations/quality-and-security/"}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Local AI Content Operations","item":"https://gorilla84-laplus.github.io/local-ai-content-operations/"},{"@type":"ListItem","position":2,"name":"Quality & Security","item":"https://gorilla84-laplus.github.io/local-ai-content-operations/quality-and-security/"}]}
+  </script>
+</head>
+<body class="phosphor-page phosphor-quality">
+  <header class="deep-header circuit-header"><div class="circuit-intro"><a href="../">← Local AI Content Operations</a><p class="eyebrow">QUALITY &amp; SECURITY / 03</p><h1>公開前に何を確かめ、誰が止めるか。</h1><p>安全を保証する仕組みではなく、失敗を見つけて止めるための確認手順を、工程に埋め込みます。</p></div><figure class="circuit-visual" aria-hidden="true"><img src="../assets/images/model-routing-v1.png" alt=""></figure></header>
+  <main class="deep-main">
+    <section class="deep-section"><div class="flow"><article><b>CHECK</b><div><h3>構造と表記の検査</h3><p>禁止表現、Markdown漏れ、途中切れ、PR表記、リンクなどを確認する。</p></div></article><article><b>REVIEW</b><div><h3>人の目で確認</h3><p>事実性、デザイン、広告の採否、公開可否を人が判断する。</p></div></article><article><b>RELEASE</b><div><h3>明示的な本番同期</h3><p>ローカル保存と本番反映を分離し、更新対象を限定する。</p></div></article><article><b>VERIFY</b><div><h3>公開後の実表示を確認</h3><p>記事・画像・投稿が実際に見える状態かを確認する。</p></div></article></div></section>
+    <section class="deep-section"><p class="eyebrow">SECURITY BOUNDARIES</p><h2>公開する前に、扱う情報と操作範囲を分ける。</h2><div class="pill-grid"><article><h3>秘密情報を成果物やログへ残さない</h3><p>パスワード、鍵、接続情報、広告ID、内部指示は公開用の成果物・確認ログから分離する。</p></article><article><h3>書き込み先と対象を限定する</h3><p>生成物の保存先、本番同期の対象、更新操作を分け、意図しない書き換えを避ける。</p></article><article><h3>承認済みの広告だけを使用する</h3><p>広告候補は保留と承認済みを区別し、公開・配信に使う前に人が採否を判断する。</p></article><article><h3>クリックではなく実表示を確認する</h3><p>Xなど外部サービスは操作ボタンを押した事実だけで完了にせず、公開結果が実際に表示されることを確認する。</p></article></div></section>
+    <section class="deep-section"><h2>自動化しないもの。</h2><div class="comparison"><article><span>HUMAN DECISION</span><h3>事実・広告・デザイン・投稿</h3><p>誤りや違和感を完全には自動検出できないため、重要な判断を人に残す。</p></article><article class="is-system"><span>MECHANICAL CHECK</span><h3>繰り返せる確認を固定</h3><p>チェック項目、承認状態、同期、公開確認を仕組みに残し、確認漏れを減らす。</p></article></div></section>
+    <section class="deep-section"><p class="eyebrow">LIMITS</p><h2>保証ではなく、改善可能な境界を作る。</h2><p>LLMの捏造、UI変更、外部サービスの失敗は起こり得ます。だから、失敗した出力を記録し、同じモデルへの再試行だけでなくモデル・工程・確認項目を見直す運用にしています。</p></section>
+  </main>
+  <footer class="deep-footer"><strong>Next: モデルをどう分けるかを見る</strong><nav><a href="../model-routing/">Model routing →</a><a href="../evidence/">Evidence →</a><a href="../">Top</a></nav></footer>
+</body>
+</html>
